@@ -14,6 +14,7 @@
         }
     ],
     "prerequisite": [],
+    "certified": "true",
     "publisher": "Fortinet",
     "description": "Solution pack investigates alerts for command-and-control behavior by identifying the reputation of related artifacts.",
     "summary": null,
