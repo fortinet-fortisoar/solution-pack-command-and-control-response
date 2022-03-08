@@ -798,7 +798,9 @@
     "priority": null,
     "uuid": "68a8ea00-0615-41dc-a8fb-9928e153b104",
     "recordTags": [
-        "ManualAction"
+        "FSRSolutionPack",
+        "ManualAction",
+        "commandAndControlResponse-1.0.0"
     ],
     "id": "625",
     "createUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
