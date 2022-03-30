@@ -11,6 +11,13 @@
             "label": "SOAR Framework",
             "version": "1.0.0",
             "minVersion": null
+        },
+        {
+            "name": "socSimulator",
+            "type": "solutionpack",
+            "label": "SOC Simulator",
+            "version": "1.0.1",
+            "minVersion": null
         }
     ],
     "prerequisite": "",
@@ -59,6 +66,13 @@
                 "name": "VirusTotal",
                 "apiName": "virustotal",
                 "version": "2.2.0"
+            }
+        ],
+        "recordSets": [
+            {
+                "name": "Scenario",
+                "apiName": "scenario",
+                "count": 1
             }
         ]
     }

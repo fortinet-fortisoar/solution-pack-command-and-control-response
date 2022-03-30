@@ -1,0 +1,49 @@
+[
+    {
+        "@type": "Scenario",
+        "steps": {
+            "Steps": [
+                {
+                    "name": "epmp_incident-2018-04-17\/incident",
+                    "type": "createAlert",
+                    "alertFields": {
+                        "name": "WIN-EP2 - XmlWinEventLog:Microsoft-Windows-Sysmon\/Operational",
+                        "type": "Malware",
+                        "source": "ElasticSearch",
+                        "status": "Open",
+                        "fileHash": "db349b97c37d22f5ea1d1841e3c89eb4",
+                        "severity": "Medium",
+                        "sourceId": "XX-YYY-ZZZ-DEMO",
+                        "sourceIp": "185.64.219.6",
+                        "deviceUID": "712ece93-dc91-44a6-8fc4-ba3177d50473",
+                        "sourcedata": "{\"sourceIp\": \"185.64.219.6\", \"destinationIp\": \"192.168.60.155\", \"mac_address\": \"EC:92:47:8A:08:03\", \"time\": \"2018-04-17T21: 56: 37.135Z\", \"user\": \"NT AUTHORITY\\SYSTEM\", \"uuid\": \"3379f1f0-428a-11e8-c52d-000000000017\", \"state\": 1, \"summary\": \"Targeted attack detected using malware family WannaCry\", \"updated\": \"2018-04-17T21: 56: 37.135Z\", \"filehash\": [\"db349b97c37d22f5ea1d1841e3c89eb4\"], \"hostname\": \"WIN-EP2\", \"log_name\": \"epmp_incident-2018-04-17\/incident\", \"deviceUid\": [\"712ece93-dc91-44a6-8fc4-ba3177d50473\"], \"device_time\": \"2018-04-17T21: 56: 37.135Z\", \"event_count\": 1, \"priority_level\": 2, \"atp_incident_id\": 100099, \"last_event_seen\": \"2018-04-17T21: 56: 36.810Z\", \"first_event_seen\": \"2018-04-17T21: 56: 36.810Z\", \"recommended_action\": \"View the analysis below. Begin your incident response plan, such as determining the scope of the attack, containing the breach, eradicating infection, recovering the environment, and learning lessons to improve organizational security.\", \"commandLine\": \"C:\\Windows\\system32\\mssecsvc.exe -k DcomLaunch\", \"sourceProcess\": \"C:\\Windows\\System32\\mssecsvc.exe\", \"processName\": \"WmiPrvSE.exe\" }",
+                        "commandLine": "C:\\Windows\\system32\\mssecsvc.exe -k DcomLaunch",
+                        "description": "<p>Alert report by SysMon for host -WIN-EP2<br \/>View the analysis below. Begin your incident response plan, such as determining the scope of the attack, containing the breach, eradicating infection, recovering the environment, and learning lessons to improve organizational security.<\/p>",
+                        "mac_address": "EC:92:47:8A:08:03",
+                        "processName": "WmiPrvSE.exe",
+                        "targetAsset": "WIN-EP2",
+                        "closureNotes": "<p>file<\/p>",
+                        "destinationIp": "192.168.60.155",
+                        "sourceProcess": "C:\\Windows\\System32\\mssecsvc.exe"
+                    },
+                    "preCreateMessage": "create Ransomware Alert",
+                    "postCreateMessage": "",
+                    "waitTimeforNextStep": "0"
+                }
+            ]
+        },
+        "configuration": "Default (1) (1)",
+        "title": "Command & Control Response",
+        "description": "The scenario demonstrates and generates a demo alert for the Alert Type 'Malware'.\n\nThis use-case deals with containment and investigation procedures for Malware detected on assets.\nStep 1: Enriches alerts for command-and-control behavior by identifying the reputation of related artifacts such as source IP addresses and file hashes.\nStep 2: Find Geo location of Source IP.\nStep 3: Investigates any anomalous processes running on the host on which the attack has occurred are terminate using the CarbonBlack Response\nStep 4: Close the Alert ",
+        "createdAlertsID": null,
+        "uuid": "decd61e3-f272-4563-809e-c4f9b06e4fb5",
+        "createUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
+        "createDate": 1648620965.473321,
+        "modifyUser": "\/api\/3\/appliances\/57545210-2adc-472b-a24f-2df6ee8dfe63",
+        "modifyDate": 1648621880.462418,
+        "id": "6",
+        "recordTags": [
+            "Malware"
+        ]
+    }
+]
