@@ -6,14 +6,13 @@
     "tag": "#ManualAction",
     "description": "Enriches alerts for command-and-control behavior by identifying the reputation of related artifacts such as source IP addresses and file hashes. Also, investigates any anomalous processes running on the host on which the attack has occurred are terminate",
     "isActive": true,
-    "debug": false,
+    "debug": true,
     "singleRecordExecution": false,
     "remoteExecutableFlag": false,
     "parameters": [
         "record"
     ],
     "synchronous": false,
-    "lastModifyDate": 1645267388,
     "collection": "\/api\/3\/workflow_collections\/600b253f-2395-4266-af1f-1d1d14f7b1f5",
     "versions": [],
     "triggerStep": "\/api\/3\/workflow_steps\/8f27ae09-25e5-4fc7-8732-4a7a7fb3826c",
@@ -56,7 +55,7 @@
                 "version": "2.0.1",
                 "connector": "carbonblack-response",
                 "operation": "get_process_list",
-                "mock_result": "{\n\t\"data\": [{\n\t\t\"username\": \"NT AUTHORITY\\\\SYSTEM\",\n\t\t\"pid\": 4,\n\t\t\"create_time\": 1518732064,\n\t\t\"parent\": 0,\n\t\t\"sid\": \"s-1-5-18\",\n\t\t\"path\": \"c:\\\\windows\\\\system32\\\\ntoskrnl.exe\",\n\t\t\"parent_guid\": \"00000015-0000-0000-0000-000000000000\",\n\t\t\"proc_guid\": \"00000015-0000-0004-01d3-a6a87969b149\",\n\t\t\"command_line\": \"\"\n\t}, {\n\t\t\"username\": \"NT AUTHORITY\\\\SYSTEM\",\n\t\t\"pid\": 284,\n\t\t\"create_time\": 1518732064,\n\t\t\"parent\": 4,\n\t\t\"sid\": \"s-1-5-18\",\n\t\t\"path\": \"c:\\\\windows\\\\system32\\\\notepad.exe\",\n\t\t\"parent_guid\": \"00000015-0000-0004-01d3-a6a87969b149\",\n\t\t\"proc_guid\": \"00000015-0000-011c-01d3-a6a87977ff65\",\n\t\t\"command_line\": \"\\\\SystemRoot\\\\System32\\\\notepad.exe\"\n\t}, {\n\t\t\"username\": \"NT AUTHORITY\\\\SYSTEM\",\n\t\t\"pid\": 1556,\n\t\t\"create_time\": 1518732095,\n\t\t\"parent\": 580,\n\t\t\"sid\": \"s-1-5-18\",\n\t\t\"path\": \"c:\\\\program files\\\\splunkuniversalforwarder\\\\bin\\\\splunkd.exe\",\n\t\t\"parent_guid\": \"00000015-0000-0244-01d3-a6a87fc04f78\",\n\t\t\"proc_guid\": \"00000015-0000-0614-01d3-a6a88bfd23da\",\n\t\t\"command_line\": \"C:\\\\Program Files\\\\SplunkUniversalForwarder\\\\bin\\\\splunkd.exe\"\n\t}, {\n\t\t\"username\": \"WIN-EP2\\\\Administrator\",\n\t\t\"pid\": 3912,\n\t\t\"create_time\": 1518806642,\n\t\t\"parent\": 3812,\n\t\t\"sid\": \"s-1-5-21-2849517046-710737231-3522587464-500\",\n\t\t\"path\": \"c:\\\\windows\\\\system32\\\\tasklist.exe\",\n\t\t\"parent_guid\": \"00000015-0000-0ee4-01d3-a6a9200fdd09\",\n\t\t\"proc_guid\": \"00000015-0000-0f48-01d3-a7561d51e35f\",\n\t\t\"command_line\": \"TASKLIST  \"\n\t}],\n\t\"status\": \"Success\",\n\t\"operation\": \"get_process_list\",\n\t\"message\": \"\"\n}",
+                "mock_result": "{\n  \"data\": [\n    {\n      \"username\": \"NT AUTHORITY\\\\SYSTEM\",\n      \"pid\": 4,\n      \"create_time\": 1518732064,\n      \"parent\": 0,\n      \"sid\": \"s-1-5-18\",\n      \"path\": \"c:\\\\windows\\\\system32\\\\WmiPrvSE.exe\",\n      \"parent_guid\": \"00000015-0000-0000-0000-000000000000\",\n      \"proc_guid\": \"00000015-0000-0004-01d3-a6a87969b149\",\n      \"command_line\": \"\"\n    },\n    {\n      \"username\": \"NT AUTHORITY\\\\SYSTEM\",\n      \"pid\": 284,\n      \"create_time\": 1518732064,\n      \"parent\": 4,\n      \"sid\": \"s-1-5-18\",\n      \"path\": \"c:\\\\windows\\\\system32\\\\notepad.exe\",\n      \"parent_guid\": \"00000015-0000-0004-01d3-a6a87969b149\",\n      \"proc_guid\": \"00000015-0000-011c-01d3-a6a87977ff65\",\n      \"command_line\": \"\\\\SystemRoot\\\\System32\\\\notepad.exe\"\n    },\n    {\n      \"username\": \"NT AUTHORITY\\\\SYSTEM\",\n      \"pid\": 1556,\n      \"create_time\": 1518732095,\n      \"parent\": 580,\n      \"sid\": \"s-1-5-18\",\n      \"path\": \"c:\\\\program files\\\\splunkuniversalforwarder\\\\bin\\\\splunkd.exe\",\n      \"parent_guid\": \"00000015-0000-0244-01d3-a6a87fc04f78\",\n      \"proc_guid\": \"00000015-0000-0614-01d3-a6a88bfd23da\",\n      \"command_line\": \"C:\\\\Program Files\\\\SplunkUniversalForwarder\\\\bin\\\\splunkd.exe\"\n    },\n    {\n      \"username\": \"WIN-EP2\\\\Administrator\",\n      \"pid\": 3912,\n      \"create_time\": 1518806642,\n      \"parent\": 3812,\n      \"sid\": \"s-1-5-21-2849517046-710737231-3522587464-500\",\n      \"path\": \"c:\\\\windows\\\\system32\\\\tasklist.exe\",\n      \"parent_guid\": \"00000015-0000-0ee4-01d3-a6a9200fdd09\",\n      \"proc_guid\": \"00000015-0000-0f48-01d3-a7561d51e35f\",\n      \"command_line\": \"TASKLIST  \"\n    }\n  ],\n  \"status\": \"Success\",\n  \"operation\": \"get_process_list\",\n  \"message\": \"\"\n}",
                 "operationTitle": "Get All Processes",
                 "step_variables": {
                     "processList": "{{vars.result.data}}"
@@ -73,7 +72,7 @@
             "name": "Get PID for process to be terminated",
             "description": null,
             "arguments": {
-                "temp": "{% if vars.alertMetaData.process %}\n{% for i in vars.processList %}{% if i.get('path').endswith(vars.alertMetaData.process) %}{% set tmp = i %}  {{vars.pid.append(i)}} {% endif %} {% endfor %}{%endif%}"
+                "temp": "{% if vars.alertMetaData.processName %}{% for i in vars.steps.Get_Running_Process_List.data %}{% if i.get('path').endswith(vars.alertMetaData.processName) %}{% set tmp = i %}{{vars.pid.append(i)}}{% endif %} {% endfor %}{%endif%}"
             },
             "status": null,
             "top": "30",
@@ -428,9 +427,7 @@
                 "inputVariables": [],
                 "step_variables": {
                     "input": {
-                        "params": {
-                            "record": "{{ vars.record }}"
-                        },
+                        "params": [],
                         "records": "{{vars.input.records}}"
                     },
                     "record": "{{vars.input.records[0]}}"
@@ -447,7 +444,19 @@
                                 "field": "type",
                                 "value": "\/api\/3\/picklists\/0cbc2c31-c360-4770-b1e7-3653a8c24ead",
                                 "_value": {
+                                    "@id": "\/api\/3\/picklists\/0cbc2c31-c360-4770-b1e7-3653a8c24ead",
                                     "itemValue": "Malware"
+                                },
+                                "operator": "eq"
+                            },
+                            {
+                                "type": "object",
+                                "field": "status",
+                                "value": "\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146",
+                                "_value": {
+                                    "@id": "\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146",
+                                    "display": "Open",
+                                    "itemValue": "Open"
                                 },
                                 "operator": "eq"
                             }
@@ -470,22 +479,11 @@
             "description": null,
             "arguments": {
                 "resource": {
-                    "type": {
-                        "id": 248,
-                        "@id": "\/api\/3\/picklists\/ff599189-3eeb-4c86-acb0-a7915e85ac3b",
-                        "icon": null,
-                        "@type": "Picklist",
-                        "color": null,
-                        "display": "Comment",
-                        "@context": "\/api\/3\/contexts\/Picklist",
-                        "listName": "\/api\/3\/picklist_names\/0841c1eb-a0a3-4abd-b29c-9f68e4d9b14f",
-                        "itemValue": "Comment",
-                        "orderIndex": 1
-                    },
+                    "type": "\/api\/3\/picklists\/ff599189-3eeb-4c86-acb0-a7915e85ac3b",
                     "alerts": "['{{vars.input.records[0]['@id']}}']",
                     "people": [],
                     "tenant": "{{vars.input.records[0].tenant['@id']}}",
-                    "content": "<h6><span style=\"font-size: 15px; color: #DE7A13;\" class=\"fa fa-exclamation-triangle\"><\/span>&nbsp;Summary<\/h6>\n<p>Based on VirusTotal Score:<\/p>\n<p>File with hash \"{{vars.input.records[0].fileHash}}\" is {% if vars.confirmedBadFile %} <span style=\"background:#e31b1d; color: #fff;\" class=\"badge badge-pill badge-danger\"> malicious<\/span>. {% else %} <strong><span style=\"background:#339966; color: #fff;\" class=\"badge badge-pill badge-danger\">fine<\/span><\/strong>. {% endif %}<\/p>\n<p>IP \"{{vars.input.records[0].sourceIp}}\" is {% if vars.confirmedBadIP %} <span style=\"background:#e31b1d; color: #fff;\" class=\"badge badge-pill badge-danger\">malicious<\/span>. {% else %} <strong><span style=\"background:#339966; color: #fff;\" class=\"badge badge-pill badge-danger\">fine<\/span><\/strong>. {% endif %}<\/p>\n<p>&nbsp;<\/p>\n<p>Following Process(es) were terminated<\/p>\n<table border=\"1px\" style=\"width: 100%;\">\n<tbody>\n<tr>\n<th style=\"border: 1px solid; text-align: left;\"><strong>PID <\/strong><\/th>\n<th style=\"border: 1px solid; text-align: left;\"><strong>Process Path<\/strong><\/th>\n<\/tr>\n<tr style=\"display: none;\">\n<td>{% for obj in vars.pid %}<\/td>\n<\/tr>\n<tr>\n<td style=\"border: 1px solid; text-align: left;\">{{obj.pid}}<\/td>\n<td style=\"border: 1px solid; text-align: left;\">{{obj.path}}<\/td>\n<\/tr>\n<tr style=\"display: none;\">\n<td>{% endfor %}<\/td>\n<\/tr>\n<\/tbody>\n<\/table>",
+                    "content": "<h6>&nbsp;Summary<\/h6>\n<p>Based on VirusTotal Score:<\/p>\n<p>File with hash \"{{vars.input.records[0].fileHash}}\" is {% if vars.confirmedBadFile %} <span class=\"badge badge-pill badge-danger\" style=\"background: #e31b1d; color: #fff;\"> malicious<\/span>. {% else %} <strong><span class=\"badge badge-pill badge-danger\" style=\"background: #339966; color: #fff;\">fine<\/span><\/strong>. {% endif %}<\/p>\n<p>IP \"{{vars.input.records[0].sourceIp}}\" is {% if vars.confirmedBadIP %} <span class=\"badge badge-pill badge-danger\" style=\"background: #e31b1d; color: #fff;\">malicious<\/span>. {% else %} <strong><span class=\"badge badge-pill badge-danger\" style=\"background: #339966; color: #fff;\">fine<\/span><\/strong>. {% endif %}<\/p>\n<p>&nbsp;<\/p>\n<p>Following Process(es) were terminated<\/p>\n<table style=\"width: 100%;\" border=\"1px\">\n<tbody>\n<tr>\n<th style=\"border: 1px solid; text-align: left;\"><strong>PID <\/strong><\/th>\n<th style=\"border: 1px solid; text-align: left;\"><strong>Process Path<\/strong><\/th>\n<\/tr>\n<tr style=\"display: none;\">\n<td>{% for obj in vars.pid %}<\/td>\n<\/tr>\n<tr>\n<td style=\"border: 1px solid; text-align: left;\">{{obj.pid}}<\/td>\n<td style=\"border: 1px solid; text-align: left;\">{{obj.path}}<\/td>\n<\/tr>\n<tr style=\"display: none;\">\n<td>{% endfor %}<\/td>\n<\/tr>\n<\/tbody>\n<\/table>\n<p>&nbsp;<\/p>\n<p>&nbsp;<\/p>\n<p>Alert has been <strong>Closed<\/strong><\/p>",
                     "__replace": "",
                     "isImportant": false,
                     "peopleUpdated": false
@@ -593,6 +591,30 @@
             "left": "450",
             "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
             "uuid": "d14ebaf6-5811-4708-b056-6533752ab2d1"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Close Alert",
+            "description": null,
+            "arguments": {
+                "resource": {
+                    "status": "\/api\/3\/picklists\/fac53e73-8d16-4189-98d5-95fbd1555232"
+                },
+                "_showJson": false,
+                "operation": "Append",
+                "collection": "{{vars.input.records[0]['@id']}}",
+                "__recommend": [],
+                "collectionType": "\/api\/3\/alerts",
+                "fieldOperation": {
+                    "recordTags": "Append"
+                },
+                "step_variables": []
+            },
+            "status": null,
+            "top": "430",
+            "left": "2725",
+            "stepType": "\/api\/3\/workflow_step_types\/b593663d-7d13-40ce-a3a3-96dece928722",
+            "uuid": "f3d7ab41-8c09-4da0-a7c5-b03217bc0c9e"
         }
     ],
     "routes": [
@@ -793,19 +815,23 @@
             "label": null,
             "isExecuted": false,
             "uuid": "3c5e3ef4-230f-408e-9674-4e6c94f26bb8"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Conclusion -> Close Alert",
+            "targetStep": "\/api\/3\/workflow_steps\/f3d7ab41-8c09-4da0-a7c5-b03217bc0c9e",
+            "sourceStep": "\/api\/3\/workflow_steps\/a69bcc40-0f35-421f-8223-34cab2e072b6",
+            "label": null,
+            "isExecuted": false,
+            "uuid": "9bba70cf-7f8f-40d0-9722-7314d2db892d"
         }
     ],
     "priority": null,
     "uuid": "68a8ea00-0615-41dc-a8fb-9928e153b104",
-    "recordTags": [
-        "ManualAction"
-    ],
-    "id": "625",
-    "createUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
-    "createDate": 1645267389.059514,
-    "modifyUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
-    "modifyDate": 1645267389.059514,
     "owners": [],
     "isPrivate": false,
-    "deletedAt": null
+    "deletedAt": null,
+    "recordTags": [
+        "ManualAction"
+    ]
 }
