@@ -23,7 +23,7 @@
     "prerequisite": "",
     "certified": "false",
     "publisher": "Fortinet",
-    "description": "Solution pack investigates alerts for command-and-control behavior by identifying the reputation of related artifacts. Few important integrations used in the solution pack are CarbonBlack Response",
+    "description": "Solution pack investigates alerts for command-and-control behavior by identifying the reputation of related artifacts. Few important integrations used in the solution pack are CarbonBlack Response, IPStack and Virustotal",
     "help": "https://github.com/fortinet-fortisoar/solution-pack-command-and-control-response/blob/develop/README.md",
     "category": [],
     "supportInfo": "",
