@@ -21,17 +21,15 @@
         }
     ],
     "prerequisite": "",
-    "certified": "true",
+    "certified": "false",
     "publisher": "Fortinet",
-    "description": "Solution pack investigates alerts for command-and-control behavior by identifying the reputation of related artifacts.",
-    "help": "https:\/\/github.com\/fortinet-fortisoar\/solution-pack-command-and-control-response\/blob\/develop\/README.md",
+    "description": "Solution pack investigates alerts for command-and-control behavior by identifying the reputation of related artifacts. Few important integrations used in the solution pack are CarbonBlack Response, IPStack and Virustotal",
+    "help": "https://github.com/fortinet-fortisoar/solution-pack-command-and-control-response/blob/develop/README.md",
     "category": [],
-    "supportInfo": "support@fortinet.com",
+    "supportInfo": "",
     "iconLarge": null,
     "fsrMinCompatibility": "7.2.0",
-    "date": "2022-02-19T12:33:09+00:00",
-    "exported_from": "master.fortisoar.com",
-    "exported_by": "CS Admin",
+    "date": "2022-04-08T12:18:29+00:00",
     "contents": {
         "playbooks": [
             {
@@ -40,7 +38,7 @@
         ],
         "globalVariables": [
             {
-                "id": 14,
+                "id": 16,
                 "name": "Demo_mode",
                 "value": "true",
                 "default_value": "true"
@@ -49,23 +47,15 @@
         "connectors": [
             {
                 "name": "CarbonBlack Response",
-                "apiName": "carbonblack-response",
-                "version": "2.0.1"
+                "apiName": "carbonblack-response"
             },
             {
                 "name": "IPStack",
-                "apiName": "ipstack",
-                "version": "1.0.0"
-            },
-            {
-                "name": "Utilities",
-                "apiName": "cyops_utilities",
-                "version": "3.2.1"
+                "apiName": "ipstack"
             },
             {
                 "name": "VirusTotal",
-                "apiName": "virustotal",
-                "version": "2.2.0"
+                "apiName": "virustotal"
             }
         ],
         "recordSets": [
