@@ -1,1 +1,0 @@
-solution-pack-command-and-control-response
