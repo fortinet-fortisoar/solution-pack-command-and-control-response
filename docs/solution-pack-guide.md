@@ -5,7 +5,7 @@
 This solution pack contains two types of execution workflows
 
 - Scenario-based Workflow
-- Investigate C2 Malware Traffic Workflow
+- Investigate Command & Control Response Workflow
 
 ### 1. Scenario-based Workflow
 
@@ -24,7 +24,7 @@ The scenario demonstrates and generates a demo alert for the Alert Type `Malware
     4. The created Alerts records IRI will be displayed in the Scenario record
     ![Alert Record IRI](media/alertsRecordsIRI.png)
 
-### 2. Investigate Command & Control Response
+### 2. Investigate Command & Control Response Workflow
 
 - Refer to the below step to execute the use-case:
 

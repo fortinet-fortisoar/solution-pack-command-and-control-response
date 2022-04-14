@@ -4,7 +4,7 @@
 
 ### Introduction
 
-This article describes the Command and Control Response Solutions Pack. The solution pack demonstrates the scenarios and use cases around C&C Malware. The scenario demonstrates and generates a demo alert for the Alert Type 'Malware'.The use-case deals with containment and investigation procedures once the end-user reports a Malware Alert.
+This article describes the Command and Control Response Solutions Pack. The solution pack demonstrates the scenarios and use cases around C&C response. The scenario demonstrates and generates a demo alert for the Alert Type 'Malware'.The use-case deals with containment and investigation procedures once the end-user reports a Malware Alert.
 
 - Enriches alerts for command-and-control behaviour by identifying the reputation of related artefacts such as source IP addresses and file hashes.
 - Find Geolocation of Source IP.
