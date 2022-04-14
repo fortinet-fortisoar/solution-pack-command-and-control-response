@@ -38,7 +38,7 @@ Ensure that the below solution packs are deployed:
     |**Sr.No.**|**Connector**|
     | :- | :- |
     |1|CarbonBlack Response|
-    |2|IPStack|1.0.0|
+    |2|IPStack|
     |3|VirusTotal|
 
     **Warning:** After deployment, this Solution Pack will install or upgrade the stated connectors list.
