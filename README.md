@@ -1,26 +1,39 @@
 # Command and Control Response Solution Pack
 
+## Release Information
+
+- Solution Pack Version: 1.0.0
+- Minimum Compatible FortiSOAR™ Version: 7.2.0
+- Authored By: Fortinet
+- Certified: No
+
 ## Overview
 
 ### Introduction
 
-This article describes the Command and Control Response Solutions Pack. The solution pack demonstrates the scenarios and use cases around C&C response. The scenario demonstrates and generates a demo alert for the Alert Type 'Malware'. The use-case deals with containment and investigation procedures once the end-user reports a Malware Alert.
+*Command and Control Response Solutions Pack* demonstrates the scenario and use cases around C&C response. The use-case deals with containment and investigation procedures once the end-user reports a Malware Alert.
+
+### Usage
+
+This Solution Pack ships with following simulation scenarios. [Refer](https://github.com/fortinet-fortisoar/solution-pack-soc-simulator/blob/develop/docs/solution-pack-guide.md) to Simulate Scenario documentation to undersand how to Simulate and Reset Scenario.
+
+#### 1. Scenario: Command and Control Response
+
+The scenario generates a demo alert for the Alert Type 'Malware'.
+
+Goto generated alert and observe the following:
+
+- Asset details like IP Addesss, Device UID is presented
+- Also details such as Source Process, Process Name, File Hash presented to analying the case
+
+**Investigate Command & Control:**
+
+Launch "Investigate Command & Control" playbook and observe various investigation activities such as
 
 - Enriches alerts for command-and-control behaviour by identifying the reputation of related artefacts such as source IP addresses and file hashes.
 - Find Geolocation of Source IP.
 - Investigates any anomalous processes running on the host on which the attack has occurred are terminated using the CarbonBlack Response
 - Close the Alert
-
-### Usage
-
-More information about usage/configuring of the Command and Control Response Solution Pack [here](https://github.com/fortinet-fortisoar/solution-pack-command-and-control-response/blob/develop/docs/solution-pack-guide.md).
-
-## Version Information
-
-- Solution Pack Version: 1.0.0
-- FortiSOAR™ Version Tested on: 7.2.0
-- Authored By: Fortinet
-- Certified: No
 
 ## Prerequisite
 
@@ -48,10 +61,8 @@ Ensure that the below solution packs are deployed:
     - 02 - Use Case - Command & Control Response (1):
     Following is a list of playbooks in this solution pack.
 
-    **Playbook Name**|**Description**
+    |**Playbook Name**|**Description**|
     | :- | :- |
     |Investigate Command & Control|Enriches alerts for command-and-control behaviour by identifying related artefacts' reputations such as source IP addresses and file hashes. Also, investigates any anomalous processes running on the host on which the attack has occurred are terminated.|
 
-    **Warning:** It is recommended to clone these Playbooks before any customizations to avoid loss of information while upgrading the Solution Pack.
-
-
+     **Warning:** It is recommended to clone these Playbooks before any customizations to avoid loss of information while upgrading the Solution Pack.
