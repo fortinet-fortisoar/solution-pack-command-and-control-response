@@ -59,7 +59,6 @@ Ensure that the below solution packs are deployed:
 2. Playbook Collection(s)
 
     - 02 - Use Case - Command & Control Response (1):
-    Following is a list of playbooks in this solution pack.
 
     |**Playbook Name**|**Description**|
     | :- | :- |
