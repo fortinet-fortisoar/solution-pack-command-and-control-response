@@ -17,7 +17,7 @@
 
 Refer to [Simulate Scenario documentation](https://github.com/fortinet-fortisoar/solution-pack-soc-simulator/blob/develop/docs/solution-pack-guide.md) to understand how to Simulate and Reset scenarios.
 
-MITRE ATT&CK Threat Hunting Solution Pack ships with the following simulation scenarios. 
+Command and Control Response Solution Pack ships with the following simulation scenarios. 
 
 #### 1. Scenario: Command and Control Response
 
