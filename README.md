@@ -15,24 +15,26 @@
 
 ### Usage
 
-This Solution Pack ships with following simulation scenarios. [Refer](https://github.com/fortinet-fortisoar/solution-pack-soc-simulator/blob/develop/docs/solution-pack-guide.md) to Simulate Scenario documentation to undersand how to Simulate and Reset Scenario.
+Refer to [Simulate Scenario documentation](https://github.com/fortinet-fortisoar/solution-pack-soc-simulator/blob/develop/docs/solution-pack-guide.md) to understand how to Simulate and Reset scenarios.
+
+MITRE ATT&CK Threat Hunting Solution Pack ships with the following simulation scenarios. 
 
 #### 1. Scenario: Command and Control Response
 
 The scenario generates a demo alert for the Alert Type 'Malware'.
 
-Goto generated alert and observe the following:
+Navigate to generated alert and observe the following:
 
-- Asset details like IP Addesss, Device UID is presented
-- Also details such as Source Process, Process Name, File Hash presented to analying the case
+- Asset details like IP Address, Device UID are present
+- Details such as Source Process, Process Name, File Hash are present to analyze the case
 
 **Investigate Command & Control:**
 
-Launch "Investigate Command & Control" playbook and observe various investigation activities such as
+Launch **Investigate Command & Control** playbook and observe various investigation activities such as:
 
-- Enriches alerts for command-and-control behaviour by identifying the reputation of related artefacts such as source IP addresses and file hashes.
-- Find Geolocation of Source IP.
-- Investigates any anomalous processes running on the host on which the attack has occurred are terminated using the CarbonBlack Response
+- Enriched alerts for command-and-control behavior by identifying the reputation of related artifacts such as source IP addresses and file hashes.
+- Geolocation of Source IP.
+- Anomalous processes running on the host, which was the target of the attack, are terminated using the CarbonBlack Response
 - Close the Alert
 
 ## Prerequisite
@@ -62,6 +64,6 @@ Ensure that the below solution packs are deployed:
 
     |**Playbook Name**|**Description**|
     | :- | :- |
-    |Investigate Command & Control|Enriches alerts for command-and-control behaviour by identifying related artefacts' reputations such as source IP addresses and file hashes. Also, investigates any anomalous processes running on the host on which the attack has occurred are terminated.|
+    |Investigate Command & Control|Enriches alerts for command-and-control behavior by identifying related artifacts' reputations, such as source IP addresses and file hashes. Terminates anomalous processes running on the host, which was target of the attack.|
 
      **Warning:** It is recommended to clone these Playbooks before any customizations to avoid loss of information while upgrading the Solution Pack.
