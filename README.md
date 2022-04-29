@@ -1,5 +1,3 @@
-# Command and Control Response Solution Pack
-
 ## Release Information
 
 - Solution Pack Version: 1.0.0
@@ -19,9 +17,9 @@ Refer to [Simulate Scenario documentation](https://github.com/fortinet-fortisoar
 
 Command and Control Response Solution Pack ships with the following simulation scenarios. 
 
-#### 1. Scenario: Command and Control Response
+**Command and Control Response**
 
-The scenario generates a demo alert for the Alert Type 'Malware'.
+The scenario generates a demo alert for the Alert Type **Malware**.
 
 Navigate to generated alert and observe the following:
 
@@ -30,16 +28,16 @@ Navigate to generated alert and observe the following:
 
 **Investigate Command & Control:**
 
-Launch **Investigate Command & Control** playbook and observe various investigation activities such as:
+Launch **Investigate Command & Control** playbook and observe how the playbook:
 
-- Enriched alerts for command-and-control behavior by identifying the reputation of related artifacts such as source IP addresses and file hashes.
-- Geolocation of Source IP.
-- Anomalous processes running on the host, which was the target of the attack, are terminated using the CarbonBlack Response
-- Close the Alert
+- Enriches alerts for command-and-control behavior by identifying the reputation of related artifacts such as source IP addresses and file hashes
+- Identifies Geolocation of Source IP
+- Investigates and terminates, using the CarbonBlack Response, anomalous processes running on the host that was the target of the attack
+- Closes the alert after performing the tasks mentioned
 
 ## Prerequisite
 
-Ensure that the below solution packs are deployed:
+Ensure that the following solution packs are deployed:
 
 |**Solution Pack**|**Purpose**|**Doc Link**|
 | :- | :- | :- |
