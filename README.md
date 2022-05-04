@@ -9,7 +9,7 @@
 
 ### Introduction
 
-*Command and Control Response Solutions Pack* demonstrates the scenario and use cases around C&C response. The use-case deals with containment and investigation procedures once the end-user reports a Malware Alert.
+**Command and Control Response Solutions Pack** demonstrates the scenario and use cases around C&C response. The use-case deals with containment and investigation procedures once the end-user reports a Malware Alert.
 
 ### Usage
 
